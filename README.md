@@ -35,13 +35,10 @@
 
 ---
 
-
-
 ## 📚 Table of Contents
 
 - [Architecture & Code Structure](#architecture--code-structure)
 - [Features & 80/20 Focus](#features--8020-focus)
-- [Live Demo & Screenshots](#live-demo--screenshots)
 - [Installation & Setup](#installation--setup)
 - [Usage](#usage)
 - [Methodology & Workflow](#methodology--workflow)
@@ -50,39 +47,42 @@
 - [Contributing](#contributing)
 - [License](#license)
 - [Collaborative Project Plan & 4-Week Accelerated Challenges](#collaborative-project-plan--4-week-accelerated-challenges)
+- [4-Week Timeline](#️-4-week-timeline)
+- [Weekly Challenges & Tasks](#-weekly-challenges--tasks)
+- [Methodology & Collaboration Tips](#️-methodology--collaboration-tips)
 
 ---
 
 ## 🏗️ Architecture & Code Structure
 
-```text
-proctor-system/
-├── frontend/                  # React app (WebRTC video, dashboard)
-│   ├── src/
-│   │   ├── components/        # UI: Dashboard, Alerts, VideoFeed
-│   │   ├── services/          # API: Auth, Recording, Alerts
-│   │   └── utils/             # Helpers: formatters, validators
-│   └── package.json
-├── backend/                   # Node.js / Express (or Django / Flask)
-│   ├── src/
-│   │   ├── controllers/       # REST endpoints
-│   │   ├── middleware/        # Auth, rate-limit, error handling
-│   │   ├── models/            # DB: User, Session, Violation
-│   │   ├── services/          # Logic: ExamSession, ViolationDetector
-│   │   └── utils/             # Logging, config, email
-│   └── package.json
-├── ai-services/               # Python microservices (Dockerized)
-│   ├── face_recognition/      # Real-time face detection & liveness
-│   ├── gaze_detection/        # Eye-gaze anomaly detection
-│   ├── screen_monitor/        # Screenshot diff & tab-focus tracking
-│   └── requirements.txt       # Python dependencies
-├── infra/                     # Kubernetes / Terraform configs
-│   ├── k8s/
-│   └── terraform/
-└── docs/
-    ├── architecture.md
-    ├── api_spec.md
-    └── dev_guide.md
+    proctor-system/
+    ├── frontend/                  # React app (WebRTC video, dashboard)
+    │   ├── src/
+    │   │   ├── components/        # UI: Dashboard, Alerts, VideoFeed
+    │   │   ├── services/          # API: Auth, Recording, Alerts
+    │   │   └── utils/             # Helpers: formatters, validators
+    │   └── package.json
+    ├── backend/                   # Node.js / Express (or Django / Flask)
+    │   ├── src/
+    │   │   ├── controllers/       # REST endpoints
+    │   │   ├── middleware/        # Auth, rate-limit, error handling
+    │   │   ├── models/            # DB: User, Session, Violation
+    │   │   ├── services/          # Logic: ExamSession, ViolationDetector
+    │   │   └── utils/             # Logging, config, email
+    │   └── package.json
+    ├── ai-services/               # Python microservices (Dockerized)
+    │   ├── face_recognition/      # Real-time face detection & liveness
+    │   ├── gaze_detection/        # Eye-gaze anomaly detection
+    │   ├── screen_monitor/        # Screenshot diff & tab-focus tracking
+    │   └── requirements.txt       # Python dependencies
+    ├── infra/                     # Kubernetes / Terraform configs
+    │   ├── k8s/
+    │   └── terraform/
+    └── docs/
+        ├── architecture.md
+        ├── api_spec.md
+        └── dev_guide.md
+
 ## Features & 80/20 Focus
 
 > Focus on the 20% of features that mitigate 80% of cheating:
