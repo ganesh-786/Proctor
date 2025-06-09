@@ -1,40 +1,74 @@
-# Online Exam Proctoring System
+<!-- =========================== -->
+<!--    Proctor README.md        -->
+<!-- Highly Professional, Visual -->
+<!-- =========================== -->
 
-A modular, microservices-based solution for secure, automated online exam proctoring.
+<!-- Hero Banner / Animation -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ganesh-786/Proctor/main/assets/banner-animated.gif" alt="Proctor: Online Exam Proctoring System" width="85%" />
+</p>
+
+<h1 align="center">
+  <img src="https://img.shields.io/badge/Proctor-Online%20Exam%20Proctoring%20System-2563eb?style=for-the-badge&logo=github&logoColor=white" height="32" alt="Proctor Badge"/>
+</h1>
+
+<p align="center">
+  <b>A modular, microservices-based solution for secure, AI-powered online exam proctoring.</b><br>
+  <i>Collaborative, ethical, and scalable assessment—built for the future of online education.</i>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/ganesh-786/Proctor?style=flat-square" />
+  <img src="https://img.shields.io/github/forks/ganesh-786/Proctor?style=flat-square" />
+  <img src="https://img.shields.io/github/issues/ganesh-786/Proctor?style=flat-square" />
+  <img src="https://img.shields.io/github/license/ganesh-786/Proctor?style=flat-square" />
+  <img src="https://img.shields.io/badge/Made%20With-💙%20Microservices-blue?style=flat-square" />
+</p>
 
 ---
 
-## Table of Contents
-
-1. [Architecture & Code Structure](#architecture--code-structure)
-2. [Features & 80/20 Focus](#features--8020-focus)
-3. [Installation & Setup](#installation--setup)
-4. [Usage](#usage)
-5. [Methodology & Workflow](#methodology--workflow)
-6. [Research & References](#research--references)
-7. [YouTube Tutorials](#youtube-tutorials)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Collaborative Project Plan & 4-Week Accelerated Challenges](#collaborative-project-plan-4-week-accelerated-challenges)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ganesh-786/Proctor/main/assets/demo-dashboard.gif" width="70%" alt="Animated Dashboard Demo" />
+  <br>
+  <i>Proctor: Real-time monitoring, AI alerts, and secure assessment in action</i>
+</div>
 
 ---
 
-## Architecture & Code Structure
 
-```
+
+## 📚 Table of Contents
+
+- [Architecture & Code Structure](#architecture--code-structure)
+- [Features & 80/20 Focus](#features--8020-focus)
+- [Live Demo & Screenshots](#live-demo--screenshots)
+- [Installation & Setup](#installation--setup)
+- [Usage](#usage)
+- [Methodology & Workflow](#methodology--workflow)
+- [Research & References](#research--references)
+- [YouTube Tutorials](#youtube-tutorials)
+- [Contributing](#contributing)
+- [License](#license)
+- [Collaborative Project Plan & 4-Week Accelerated Challenges](#collaborative-project-plan--4-week-accelerated-challenges)
+
+---
+
+## 🏗️ Architecture & Code Structure
+
+```text
 proctor-system/
 ├── frontend/                  # React app (WebRTC video, dashboard)
 │   ├── src/
-│   │   ├── components/        # UI components: Dashboard, Alerts, VideoFeed
-│   │   ├── services/          # API wrappers: Auth, Recording, Alerts
+│   │   ├── components/        # UI: Dashboard, Alerts, VideoFeed
+│   │   ├── services/          # API: Auth, Recording, Alerts
 │   │   └── utils/             # Helpers: formatters, validators
 │   └── package.json
 ├── backend/                   # Node.js / Express (or Django / Flask)
 │   ├── src/
 │   │   ├── controllers/       # REST endpoints
 │   │   ├── middleware/        # Auth, rate-limit, error handling
-│   │   ├── models/            # DB schemas: User, Session, Violation
-│   │   ├── services/          # Business logic: ExamSession, ViolationDetector
+│   │   ├── models/            # DB: User, Session, Violation
+│   │   ├── services/          # Logic: ExamSession, ViolationDetector
 │   │   └── utils/             # Logging, config, email
 │   └── package.json
 ├── ai-services/               # Python microservices (Dockerized)
@@ -49,10 +83,6 @@ proctor-system/
     ├── architecture.md
     ├── api_spec.md
     └── dev_guide.md
-```
-
----
-
 ## Features & 80/20 Focus
 
 > Focus on the 20% of features that mitigate 80% of cheating:
