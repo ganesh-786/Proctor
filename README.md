@@ -145,9 +145,9 @@ terraform apply
 
 ## Research & References
 
-* Xu et al., *iExam: Face Detection & Recognition System* (2021). Lightweight real-time Zoom monitoring with 90.4% accuracy.
-* Shih et al., *AI-assisted Gaze Detection* (2024). Reduces proctor review time by >50%.
-* Coghlan et al., *Ethics of AI Proctoring* (2020). Privacy, fairness, transparency guidelines.
+* Xu et al., *iExam: Face Detection & Recognition System* (2021). Lightweight real-time Zoom monitoring with 90.4% accuracy. <br> [Article1](https://www.researchgate.net/publication/369814086_Online_Exam_Proctoring_System),  [Article2](https://www.mdpi.com/2079-3197/11/6/120?utm_source=chatgpt.com)
+* Shih et al., *AI-assisted Gaze Detection* (2024). Reduces proctor review time by >50%. <br>[Article1](https://arxiv.org/abs/2206.13356?utm_source=chatgpt.com)
+* Coghlan et al., *Ethics of AI Proctoring* (2020). Privacy, fairness, transparency guidelines.<br> [Article1](https://arxiv.org/abs/2011.07647?utm_source=chatgpt.com)
 * Balash et al., *Educator Adoption of Remote Proctoring* (2023). 35% plan to continue post-pandemic.
 
 ---
