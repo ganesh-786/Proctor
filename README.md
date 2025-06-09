@@ -15,6 +15,7 @@ A modular, microservices-based solution for secure, automated online exam procto
 7. [YouTube Tutorials](#youtube-tutorials)
 8. [Contributing](#contributing)
 9. [License](#license)
+10. [Collaborative Project Plan & 4-Week Accelerated Challenges](#collaborative-project-plan-4-week-accelerated-challenges)
 
 ---
 
@@ -160,7 +161,6 @@ terraform apply
 * [Real-Time Gaze Tracking with OpenCV](https://youtu.be/example4)
 
 ---
-
 ## Contributing
 
 1. Fork the repository
@@ -174,4 +174,95 @@ terraform apply
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+# Collaborative Project Plan & 4-Week Accelerated Challenges
+
+A condensed 4-week roadmap to build the core Online Exam Proctoring System collaboratively, focusing on the essential 20% of features that deliver 80% of value.
+
+---
+
+## 🗓️ 4-Week Timeline
+
+| Week | Sprint Focus                   | Key Deliverables                           |
+| ---- | ------------------------------ | ------------------------------------------ |
+| 1    | Kickoff, Auth & Frontend Setup | - Project kickoff & backlog prioritization |
+
+* JWT auth + ID-photo upload endpoint
+* React app skeleton + WebRTC demo                 |
+  \| 2    | Face Recognition & Gaze Detection| - Dockerized face\_recognition service with `/detect`
+* Gaze detection microservice & frontend stub       |
+  \| 3    | Screen Monitoring & Alerts       | - Chrome extension for tab-switch & screenshots
+* Backend rule-engine & real-time alerts via WebSockets|
+  \| 4    | Recording, Reporting & Review    | - Session recording pipeline + S3 storage integration
+* Suspicion-score reports (PDF/CSV)
+* Reviewer dashboard MVP                            |
+
+---
+
+## 🚀 Weekly Challenges & Tasks
+
+### Week 1: Kickoff, Auth & Frontend Setup
+
+* **Tasks**:
+
+  * Define MVP scope, roles, GitHub Projects board
+  * Implement JWT authentication & ID-photo upload in backend
+  * Scaffold React app and integrate a simple WebRTC peer connection
+* **Tips**:
+
+  * Use Passport.js (Node) or DRF JWT for auth flows
+  * Leverage `simple-peer` library for quick WebRTC setup
+
+### Week 2: Face Recognition & Gaze Detection
+
+* **Tasks**:
+
+  * Containerize FastAPI face\_recognition service; preload models
+  * Build gaze\_detection service using OpenCV’s `solvePnP`
+  * Create a frontend stub to call both AI endpoints and log responses
+* **Tips**:
+
+  * Preload models at service startup to reduce latency
+  * Structure AI services as lightweight Docker containers
+
+### Week 3: Screen Monitoring & Real-Time Alerts
+
+* **Tasks**:
+
+  * Develop Chrome extension for tab visibility and periodic screenshots
+  * Implement backend rule-engine that consumes AI flags and tab events
+  * Push alerts to frontend via `socket.io` and display in an Alerts panel
+* **Tips**:
+
+  * Use `chrome.tabs.onActivated` and `chrome.desktopCapture` APIs
+  * Keep rule logic configurable (e.g., JSON-based thresholds)
+
+### Week 4: Recording, Reporting & Reviewer Dashboard
+
+* **Tasks**:
+
+  * Stream-record video + screen into 5-minute chunks; upload to S3
+  * Compute suspicion-score timeline and generate PDF/CSV reports
+  * Build a minimal Reviewer Dashboard for flag review and overrides
+* **Tips**:
+
+  * Use chunked uploads to avoid memory bloat
+  * Template PDF reports with PDFKit or LaTeX for consistent styling
+
+---
+
+## 🛠️ Methodology & Collaboration Tips
+
+* **Version Control**: Trunk-based with feature branches; enforce PR reviews.
+* **Code Quality**: ESLint/Prettier (JS), Flake8/Black (Python) in CI.
+* **Testing**: Unit tests (Jest, PyTest), integration (Supertest, FastAPI TestClient).
+* **CI/CD**: GitHub Actions for linting, tests, and Docker image builds.
+* **Communication**: Daily 15-min stand-ups, GitHub Issues for each task, Slack channels.
+
+---
+
+*This accelerated plan targets a functional MVP in 4 weeks by concentrating on the highest-impact features first.*
+
 
